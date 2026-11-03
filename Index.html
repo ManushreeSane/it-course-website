@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillStack | Learn IT Skills Online</title>
+  <meta name="description" content="Browse IT courses in cloud, web development, programming, data and security." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+      <a href="#" class="text-xl font-extrabold tracking-tight">Skill<span class="text-indigo-600">Stack</span></a>
+      <nav class="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
+        <a href="#courses" class="hover:text-indigo-600">Courses</a>
+        <a href="#why" class="hover:text-indigo-600">Why us</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+      <a href="#courses" class="hidden rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-500 md:block">Browse courses</a>
+      <button id="menuBtn" class="rounded-lg border border-slate-200 p-2 md:hidden" aria-label="Menu">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav id="mobileMenu" class="hidden border-t border-slate-200 px-4 pb-4 text-sm font-medium md:hidden">
+      <a href="#courses" class="block py-2">Courses</a>
+      <a href="#why" class="block py-2">Why us</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero text-white">
+    <div class="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 sm:py-24">
+      <span class="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold">Job-ready IT skills</span>
+      <h1 class="mx-auto mt-5 max-w-3xl text-4xl font-extrabold leading-tight sm:text-6xl">Learn cloud, code and data. Build your tech career.</h1>
+      <p class="mx-auto mt-5 max-w-2xl text-indigo-100">Project-based courses from beginner to advanced, with certification prep and clear pricing.</p>
+      <a href="#courses" class="mt-8 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-indigo-700 shadow-lg hover:bg-indigo-50">Explore courses</a>
+      <div class="mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4 text-center">
+        <div><p id="statCourses" class="text-3xl font-extrabold">0</p><p class="text-xs text-indigo-100">Courses</p></div>
+        <div><p id="statCats" class="text-3xl font-extrabold">0</p><p class="text-xs text-indigo-100">Categories</p></div>
+        <div><p class="text-3xl font-extrabold">3</p><p class="text-xs text-indigo-100">Skill levels</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses" class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+    <h2 class="text-2xl font-bold sm:text-3xl">All courses</h2>
+    <p class="mt-1 text-slate-500">Search, filter and sort to find the right course. Click a card for full details.</p>
+
+    <div class="mt-6 grid gap-3 sm:grid-cols-3">
+      <input id="search" type="search" placeholder="Search courses (e.g. AWS, React, Python)" class="ctl sm:col-span-1" />
+      <select id="level" class="ctl">
+        <option value="All">All levels</option>
+        <option>Beginner</option><option>Intermediate</option><option>Advanced</option>
+      </select>
+      <select id="sort" class="ctl">
+        <option value="popular">Sort: Top rated</option>
+        <option value="low">Price: Low to high</option>
+        <option value="high">Price: High to low</option>
+      </select>
+    </div>
+
+    <div id="chips" class="mt-4 flex flex-wrap gap-2"></div>
+    <p id="count" class="mt-4 text-sm text-slate-500"></p>
+    <div id="grid" class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+    <p id="empty" class="hidden py-16 text-center text-slate-500">No courses match your search. Try different filters.</p>
+  </section>
+
+  <!-- Why us -->
+  <section id="why" class="bg-white py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <h2 class="text-center text-2xl font-bold sm:text-3xl">Why learn with SkillStack</h2>
+      <div class="mt-8 grid gap-5 sm:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 p-6"><p class="text-3xl">🛠️</p><h3 class="mt-3 font-bold">Project-based</h3><p class="mt-1 text-sm text-slate-600">Every course ends with a real project you can add to your portfolio.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6"><p class="text-3xl">🎓</p><h3 class="mt-3 font-bold">Certification prep</h3><p class="mt-1 text-sm text-slate-600">Cloud tracks align with AWS and Azure exam objectives.</p></div>
+        <div class="rounded-2xl border border-slate-200 p-6"><p class="text-3xl">💰</p><h3 class="mt-3 font-bold">Clear pricing</h3><p class="mt-1 text-sm text-slate-600">One price per course, with no hidden fees and lifetime access.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact" class="bg-slate-900 py-12 text-center text-slate-300">
+    <h2 class="text-xl font-bold text-white">Have a question?</h2>
+    <p class="mt-1 text-sm">Write to us at <a href="mailto:hello@skillstack.example" class="text-indigo-300 underline">hello@skillstack.example</a></p>
+    <p class="mt-6 text-xs text-slate-500">SkillStack · Course details and prices on this page are sample data.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 z-50 hidden items-end justify-center bg-slate-900/60 p-0 sm:items-center sm:p-4">
+    <div id="modalBody" class="modal-box max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-t-3xl bg-white sm:rounded-3xl"></div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 translate-y-20 rounded-xl bg-slate-900 px-5 py-3 text-sm text-white opacity-0 shadow-xl transition-all duration-300"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
